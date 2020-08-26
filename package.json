@@ -1,0 +1,22 @@
+{
+  "name": "rh-11ty",
+  "version": "1.0.0",
+  "description": "Rick Hocutt Portfolio Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RickHocutt/rh-11ty.git"
+  },
+  "author": "Rick Hocutt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RickHocutt/rh-11ty/issues"
+  },
+  "homepage": "https://github.com/RickHocutt/rh-11ty#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
