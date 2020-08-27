@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: layouts/posts.njk
 title: Another cool post
 description: Post description here
 date: 2020-08-26T04:00:00.000Z
