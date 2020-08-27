@@ -1,1 +1,5 @@
-# Resume Page
+---
+layout: layouts/base.njk
+---
+
+## Resume Page
