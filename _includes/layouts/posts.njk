@@ -4,5 +4,5 @@ layout: layouts/base.njk
 
 <h1>{{title}}</h1>
 <p>{{date}}</p>
-<img src="{{ featuredImage | url }}" alt="{{ featuredImage }}">
+<img src="{{ featuredImage | url }}?nf_resize=fit&w=350" alt="{{ featuredImage }}">
 {{content | safe}}
