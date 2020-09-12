@@ -21,10 +21,17 @@
     <script>
       (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},
-        i[r].l = 1 * new Date(); a = s.createElement(o),
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        },
+        i[r].l = 1 * new Date();
+        a = s.createElement(o),
         m = s.getElementsByTagName(o)[0];
-        a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        a.async = 1;
+        a.src = g;
+        m
+          .parentNode
+          .insertBefore(a, m)
       })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
       ga('create', 'UA-687900-11', 'auto');
@@ -36,15 +43,23 @@
     <div class="primary-header bg-black px-10 py-4">
       <div class="flex items-center justify-between">
         <div>
-          <h1><a href="/" class="site-logo">Rick Hocutt</a></h1>
+          <h1>
+            <a href="/" class="site-logo">Rick Hocutt</a>
+          </h1>
         </div>
 
         <div class="flex-shrink">
           <nav>
             <ul class="flex text-white">
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#about">About Me</a></li>
-              <li><a href="#contact">Contact Me</a></li>
+              <li>
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="#about">About Me</a>
+              </li>
+              <li>
+                <a href="#contact">Contact Me</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -53,44 +68,42 @@
 
     {{content | safe}}
 
-    <div class="site-footer p-4 border-t border-gray-300">
-     <div class="max-w-5xl mx-auto flex items-center justify-between">
+    <div class="site-footer p-4 mt-16 border-t border-gray-300">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
         <div>
           <p class="text-xs">© 2008-2020 Rick Hocutt - All rights reserved</p>
         </div>
 
-        <div class="">
-          <ul class="social-media flex">
-            <li>
-              <a href="http://www.linkedin.com/in/rickhocutt" target="_blank">
-                <i class="fab fa-linkedin"></i>
-                <span class="sr-only">LinkedIn</span>
-              </a>
-            </li>
+        <ul class="social-media flex">
+          <li>
+            <a href="http://www.linkedin.com/in/rickhocutt" target="_blank">
+              <i class="fab fa-linkedin"></i>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+          </li>
 
-            <li>
-              <a href="http://twitter.com/RickHocutt" target="_blank">
-                <i class="fab fa-twitter"></i>
-                <span class="sr-only">Twitter</span>
-              </a>
-            </li>
+          <li>
+            <a href="http://twitter.com/RickHocutt" target="_blank">
+              <i class="fab fa-twitter"></i>
+              <span class="sr-only">Twitter</span>
+            </a>
+          </li>
 
-            <li>
-              <a href="http://codepen.io/RickHocutt" target="_blank">
-                <i class="fab fa-codepen"></i>
-                <span class="sr-only">CodePen</span>
-              </a>
-            </li>
+          <li>
+            <a href="http://codepen.io/RickHocutt" target="_blank">
+              <i class="fab fa-codepen"></i>
+              <span class="sr-only">CodePen</span>
+            </a>
+          </li>
 
-            <li>
-              <a href="https://github.com/RickHocutt" target="_blank">
-                <i class="fab fa-github"></i>
-                <span class="sr-only">GitHub</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-     </div>
+          <li>
+            <a href="https://github.com/RickHocutt" target="_blank">
+              <i class="fab fa-github"></i>
+              <span class="sr-only">GitHub</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!--# JAVASCRIPT #-->
@@ -99,13 +112,17 @@
 
     <script>
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
+        window
+          .netlifyIdentity
+          .on("init", user => {
+            if (!user) {
+              window
+                .netlifyIdentity
+                .on("login", () => {
+                  document.location.href = "/admin/";
+                });
+            }
+          });
       }
     </script>
   </body>

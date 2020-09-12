@@ -6,54 +6,47 @@ layout: layouts/base.njk
     <img src="images/rh-hero.jpg" alt="">
 </section>
 
-<section class="max-w-5xl mx-auto my-6 show-on-scroll" id="about">
-    <div class="grid-container">
-        <div class="grid-x grid-margin-y">
-            <div class="cell">
-                <h2 class="articleTitle">About Me</h2>
+<section class="max-w-6xl mx-auto my-6 show-on-scroll" id="about">
+    <h2>About Me</h2>
 
-                <p>
-                    I've spent the past ten years designing and building
-                    websites that conform to current web standards. I have a strong background in User Experience and
-                    User Interface Design and hand code valid HTML, CSS, and JavaScript.
-                </p>
+    <p>
+        I've spent the past ten years designing and building
+        websites that conform to current web standards. I have a strong background in User Experience and
+        User Interface Design and hand code valid HTML, CSS, and JavaScript.
+    </p>
 
-                <p>
-                    My recent duties as a UX Designer for <a href="https://alight.com/">Alight Solutions</a>,
-                    <a href="http://www.cardinalhealth.com/en/about-us/who-we-are/fuse-by-cardinal-health.html">
-                    Cardinal Health</a> and <a href="http://www.autozone.com">AutoZone</a> include determining
-                    user flows and creating wireframes, prototypes and design comps and converting them into production ready assets. On my own time I enjoy
-                    experimenting with different ways to build sites including Eleventy, Netlify, Angular, and WordPress.
-                </p>
+    <p>
+        My recent duties as a UX Designer for <a href="https://alight.com/">Alight Solutions</a>,
+        <a href="http://www.cardinalhealth.com/en/about-us/who-we-are/fuse-by-cardinal-health.html">
+        Cardinal Health</a> and <a href="http://www.autozone.com">AutoZone</a> include determining
+        user flows and creating wireframes, prototypes and design comps and converting them into production ready assets. On my own time I enjoy
+        experimenting with different ways to build sites including Eleventy, Netlify, Angular, and WordPress.
+    </p>
 
-                <p class="centered"><a class="button button--primary" href="/resume">View My Resume</a></p>
-            </div>
-        </div>
-    </div>
+    <p><a class="button button--primary" href="/resume">View My Resume</a></p>
 </section>
 
 <section class="portfolio bg-gradient-to-r from-black to-gray-800" id="portfolio">
-    <div class="max-w-5xl mx-auto my-6">
-        <h2>Portfolio</h2>
+    <div class="max-w-6xl mx-auto py-5 my-6">
+        <h2 class="text-white">Portfolio</h2>
 
-        <div class="flex">
+        <div class="flex -m-2">
             {%- for portfolio in collections.portfolio -%}
-            <div class="portfolio-item show-on-scroll">
-                <a href="{{portfolio.url}}">
-                    <img src="{{ portfolio.data.thumbImage | url }}" alt="{{ portfolio.data.title }}">
-                    <h3 class="portfolio-item__heading">{{ portfolio.data.title }}</h3>
-                </a>
-            </div>
+            <a href="{{portfolio.url}}" class="portfolio-item m-2 show-on-scroll">
+                <img src="{{ portfolio.data.thumbImage | url }}" alt="{{ portfolio.data.title }}">
+                <h3 class="portfolio-item__heading">{{ portfolio.data.title }}</h3>
+            </a>
             {%- endfor -%}
         </div>
     </div>
 </section>
 
-<section id="contact" class="max-w-5xl mx-auto my-6">
+<section id="contact" class="max-w-6xl mx-auto my-6">
     <div class="grid-container">
         <div class="grid-x grid-margin-y">
             <div class="cell" id="contact-form">
                 <h2>Contact Me</h2>
+
                 <form method="post" netlify>
                     <div class="flex -m-4">
                         <div class="flex-auto m-4">

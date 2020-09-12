@@ -2,8 +2,10 @@
 layout: layouts/base.njk
 ---
 
-<section class="max-w-5xl mx-auto">
-  <h1>{{ title }}</h1>
-  <img src="{{ featuredImage | url }}" alt="{{ title }}">
+<img src="{{ featuredImage | url }}" alt="{{ title }}">
+
+<section class="max-w-5xl mx-auto mt-6">
+  <h1 class="mb-6">{{ title }}</h1>
+
   {{ content | safe }}
 </section>

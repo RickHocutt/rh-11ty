@@ -4,7 +4,7 @@
 
 @import "tailwindcss/components";
 @import "./components/buttons.css";
-
+@import "./components/portfolio.css";
 
 .site-logo {
   display: block;
@@ -27,21 +27,16 @@
   @apply text-gray-400;
 }
 
-
 label {
   @apply block;
 }
 
 input, textarea {
-  @apply block w-full p-2 border border-solid border-black;
+  @apply block w-full p-2 border border-solid border-gray-500 shadow-inner;
 }
 
 input:focus, textarea:focus {
   @apply outline-none shadow-outline;
-}
-
-.portfolio-item {
-  @apply m-2;
 }
 
 .social-media {
