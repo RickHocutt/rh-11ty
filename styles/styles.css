@@ -1,0 +1,55 @@
+
+@import "tailwindcss/base";
+@import "./base/typography.css";
+
+@import "tailwindcss/components";
+@import "./components/buttons.css";
+
+
+.site-logo {
+  display: block;
+  text-indent: -9999px;
+  width: 100px;
+  height: 84px;
+  background: url('../images/rh-logo.svg');
+  background-size: 100px 84px;
+}
+
+.primary-header a {
+  @apply text-white text-xl mr-8;
+}
+
+.primary-header li:last-child a {
+  @apply mr-0;
+}
+
+.primary-header a:hover {
+  @apply text-gray-400;
+}
+
+
+label {
+  @apply block;
+}
+
+input, textarea {
+  @apply block w-full p-2 border border-solid border-black;
+}
+
+input:focus, textarea:focus {
+  @apply outline-none shadow-outline;
+}
+
+.portfolio-item {
+  @apply m-2;
+}
+
+.social-media {
+  @apply text-2xl;
+}
+
+.social-media a {
+  @apply text-gray-700 p-4;
+}
+
+@tailwind utilities;

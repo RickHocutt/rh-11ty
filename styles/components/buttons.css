@@ -1,0 +1,16 @@
+
+.button {
+  @apply p-2 rounded;
+}
+
+.button:focus {
+  @apply outline-none shadow-outline;
+}
+
+.button--primary {
+  @apply bg-primary-500 text-white;
+}
+
+.button--primary:hover, .button--primary:focus {
+  @apply bg-primary-700 text-white;
+}

@@ -6,7 +6,7 @@ layout: layouts/base.njk
     <img src="images/rh-hero.jpg" alt="">
 </section>
 
-<section class="about section pad content show-on-scroll" id="about">
+<section class="max-w-5xl mx-auto my-6 show-on-scroll" id="about">
     <div class="grid-container">
         <div class="grid-x grid-margin-y">
             <div class="cell">
@@ -26,63 +26,57 @@ layout: layouts/base.njk
                     experimenting with different ways to build sites including Eleventy, Netlify, Angular, and WordPress.
                 </p>
 
-                <p class="centered"><a class="button radius" href="/resume">View My Resume</a></p>
+                <p class="centered"><a class="button button--primary" href="/resume">View My Resume</a></p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="portfolio" id="portfolio" style="background: linear-gradient(135deg, #000000 0%,#5c5d66 100%); ">
-    <div class="grid-container padding-bottom-2">
-        <div class="grid-x grid-margin-y">
-            <div class="cell">
-                <h2>Portfolio</h2>
-            </div>
+<section class="portfolio bg-gradient-to-r from-black to-gray-800" id="portfolio">
+    <div class="max-w-5xl mx-auto my-6">
+        <h2>Portfolio</h2>
 
-            <div class="cell grid-x small-up-2 medium-up-3 large-up-4">
-                {%- for portfolio in collections.portfolio -%}
-                <div class="cell portfolio-item show-on-scroll">
-                    <a href="{{portfolio.url}}">
-                        <img src="{{ portfolio.data.thumbImage | url }}" alt="{{ portfolio.data.title }}">
-                        <h3 class="portfolio-item__heading">{{ portfolio.data.title }}</h3>
-                    </a>
-                </div>
-                {%- endfor -%}
+        <div class="flex">
+            {%- for portfolio in collections.portfolio -%}
+            <div class="portfolio-item show-on-scroll">
+                <a href="{{portfolio.url}}">
+                    <img src="{{ portfolio.data.thumbImage | url }}" alt="{{ portfolio.data.title }}">
+                    <h3 class="portfolio-item__heading">{{ portfolio.data.title }}</h3>
+                </a>
             </div>
+            {%- endfor -%}
         </div>
     </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="max-w-5xl mx-auto my-6">
     <div class="grid-container">
         <div class="grid-x grid-margin-y">
             <div class="cell" id="contact-form">
                 <h2>Contact Me</h2>
                 <form method="post" netlify>
-                    <div class="grid-x grid-margin-x">
-                        <div class="cell small-12 medium-6">
+                    <div class="flex -m-4">
+                        <div class="flex-auto m-4">
                             <label for="your-name">Your Name
                                 <input type="text" name="your-name" id="your-name" required>
                             </label>
                         </div>
 
-                        <div class="cell small-12 medium-6">
+                        <div class="flex-auto m-4">
                             <label for="email">Your Email address
                                 <input type="email" name="email" id="email" required>
                             </label>
                         </div>
                     </div>
 
-                    <div class="grid-x">
-                        <div class="cell small-12">
-                            <label for="message">Your Message
-                                <textarea name="message" id="message " rows="8" required></textarea>
-                            </label>
-                        </div>
+                    <div class="my-4">
+                        <label for="message">Your Message
+                            <textarea name="message" id="message " rows="8" required></textarea>
+                        </label>
                     </div>
-                    <input class="button" id="submit" name="submit" type="submit" value="Submit">
-                </form>
 
+                    <button type="submit" class="button button--primary">Submit</button>
+                </form>
             </div>
         </div>
 

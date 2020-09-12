@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="/">
 
-    <link rel="stylesheet" href="./css/styles.css?v=1.0.0"/>
+    <link rel="stylesheet" href="./css/styles.css?v={% version %}"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -33,38 +33,34 @@
   </head>
 
   <body>
-    <div class="primary-header">
-      <div class="grid-container">
-        <div class="grid-x grid-padding-y align-middle">
-          <div class="cell medium-auto">
-            <h1>
-              <a href="/">Rick Hocutt</a>
-            </h1>
-          </div>
+    <div class="primary-header bg-black px-10 py-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <h1><a href="/" class="site-logo">Rick Hocutt</a></h1>
+        </div>
 
-          <div class="cell medium-shrink">
-            <nav>
-              <ul class="menu primary-header__menu">
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-              </ul>
-            </nav>
-          </div>
+        <div class="flex-shrink">
+          <nav>
+            <ul class="flex text-white">
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#contact">Contact Me</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
 
     {{content | safe}}
 
-    <div class="grid-container">
-      <div class="grid-x">
-        <div class="cell medium-auto">
-          <p>© 2008-2020 Rick Hocutt - All rights reserved</p>
+    <div class="site-footer p-4 border-t border-gray-300">
+     <div class="max-w-5xl mx-auto flex items-center justify-between">
+        <div>
+          <p class="text-xs">© 2008-2020 Rick Hocutt - All rights reserved</p>
         </div>
 
-        <div class="cell medium-shrink">
-          <ul class="social-media menu">
+        <div class="">
+          <ul class="social-media flex">
             <li>
               <a href="http://www.linkedin.com/in/rickhocutt" target="_blank">
                 <i class="fab fa-linkedin"></i>
@@ -94,13 +90,12 @@
             </li>
           </ul>
         </div>
-      </div>
+     </div>
     </div>
 
     <!--# JAVASCRIPT #-->
     <script src="./scripts/jquery-3.3.1.min.js"></script>
-    <script src="./scripts/foundation.min.js"></script>
-    <script src="./scripts/site.js"></script>
+    <script src="./scripts/site.js?v={% version %}"></script>
 
     <script>
       if (window.netlifyIdentity) {
