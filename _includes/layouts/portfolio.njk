@@ -2,6 +2,6 @@
 layout: layouts/base.njk
 ---
 
-<h1>{{title}}</h1>
-<img src="{{ featuredImage | url }}?nf_resize=fit&w=350" alt="{{ featuredImage }}">
-{{content | safe}}
+<h1>{{ title }}</h1>
+<img src="{{ featuredImage | url }}" alt="{{ title }}">
+{{ content | safe }}

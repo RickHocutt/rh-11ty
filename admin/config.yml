@@ -12,7 +12,6 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/portfolio.njk"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
       - {label: "Portfolio Body", name: "body", widget: "markdown"}
       - {label: "Thumbnail Image", name: "thumbImage", widget: "image"}
       - {label: "Featured Image", name: "featuredImage", widget: "image"}
