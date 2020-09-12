@@ -1,6 +1,9 @@
 module.exports = function(eleventyConfig) {
+  // eleventyConfig.setUseGitIgnore(false);
+
   eleventyConfig.addPassthroughCopy('images');
   eleventyConfig.addPassthroughCopy('css');
+  eleventyConfig.addPassthroughCopy('scripts');
   eleventyConfig.addPassthroughCopy('admin');
 
   const {

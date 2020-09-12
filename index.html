@@ -1,0 +1,90 @@
+---
+layout: layouts/base.njk
+---
+
+<section class="main pages content" id="home">
+    <img src="images/rh-hero.jpg" alt="">
+</section>
+
+<section class="about section pad content show-on-scroll" id="anchor-about">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-y">
+            <div class="cell">
+                <h2 class="articleTitle">About Me</h2>
+
+                <p>
+                    I've spent the past ten years designing and building
+                    websites that conform to current web standards. I have a strong background in User Experience and
+                    User Interface Design and hand code valid HTML, CSS, and JavaScript.
+                </p>
+
+                <p>
+                    My recent duties as a UX Designer for <a href="https://alight.com/">Alight Solutions</a>,
+                    <a href="http://www.cardinalhealth.com/en/about-us/who-we-are/fuse-by-cardinal-health.html">
+                    Cardinal Health</a> and <a href="http://www.autozone.com">AutoZone</a> include determining
+                    user flows and creating wireframes, prototypes and design comps and converting them into production ready assets. On my own time I enjoy
+                    experimenting with different ways to build sites including Eleventy, Netlify, Angular, and WordPress.
+                </p>
+
+                <p class="centered"><a class="button radius" href="/resume">View My Resume</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio" id="portfolio" style="background: linear-gradient(135deg, #000000 0%,#5c5d66 100%); ">
+    <div class="grid-container padding-bottom-2">
+        <div class="grid-x grid-margin-y">
+            <div class="cell">
+                <h2>Portfolio</h2>
+            </div>
+
+            <div class="cell grid-x small-up-2 medium-up-3 large-up-4">
+                {%- for portfolio in collections.portfolio -%}
+                <div class="cell portfolio-item show-on-scroll">
+                    <a href="{{portfolio.url}}">
+                        <img src="{{ portfolio.data.thumbImage | url }}" alt="{{ portfolio.data.title }}">
+                        <h3 class="portfolio-item__heading">{{ portfolio.data.title }}</h3>
+                    </a>
+                </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="anchor-contact">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-y">
+            <div class="cell" id="contact-form">
+                <h2>Contact Me</h2>
+                <form method="post" netlify>
+                    <div class="grid-x grid-margin-x">
+                        <div class="cell small-12 medium-6">
+                            <label for="your-name">Your Name
+                                <input type="text" name="your-name" id="your-name" required>
+                            </label>
+                        </div>
+
+                        <div class="cell small-12 medium-6">
+                            <label for="email">Your Email address
+                                <input type="email" name="email" id="email" required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="grid-x">
+                        <div class="cell small-12">
+                            <label for="message">Your Message
+                                <textarea name="message" id="message " rows="8" required></textarea>
+                            </label>
+                        </div>
+                    </div>
+                    <input class="button" id="submit" name="submit" type="submit" value="Submit">
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</section>

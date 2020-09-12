@@ -1,0 +1,38 @@
+.primary-header h1 a {
+    display: block;
+    text-indent: -9999px;
+    width: 100px;
+    height: 84px;
+    background: url(../images/rh-logo.svg);
+    background-size: 100px 84px;
+}
+
+.primary-header {
+    display: block;
+    width: 100%;
+    z-index: 100;
+    background: #000;
+
+    &__menu {
+        a {
+            color: #fff;
+            font-size: rem-calc(20);
+
+            &:hover {
+                color: #aaaaaa;
+            }
+        }
+    }
+}
+
+.social-media {
+    font-size: 2em;
+
+    a {
+        color: #777;
+
+        &:hover {
+            color: #2A3391;
+        }
+    }
+}

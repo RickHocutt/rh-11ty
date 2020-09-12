@@ -4,15 +4,28 @@ backend:
 media_folder: "_site/images/uploads"
 public_folder: "/images/uploads"
 collections:
- - name: "posts"        #The name of the collection and should match our posts.json file's tag
-   label: "Posts"       #The name of the collection on the CMS itself
-   folder: "posts"      #The folder that our blog posts will be loaded from and saved to
-   create: true             #Tells the CMS that new posts can be created
-   slug: "{{slug}}"  #this sets the URL for the post
-   fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/posts.njk"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Date", name: "date", widget: "date", default: ""}
-      - {label: "Post Body", name: "body", widget: "markdown"}
-      - {label: "Featured Image", name: "featuredImage", widget: "image"}
+  - name: "portfolio"        #The name of the collection and should match our posts.json file's tag
+  label: "Portfolio"       #The name of the collection on the CMS itself
+  folder: "portfolio"      #The folder that our blog posts will be loaded from and saved to
+  create: true             #Tells the CMS that new posts can be created
+  slug: "{{slug}}"  #this sets the URL for the post
+  fields:
+    - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/portfolio.njk"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Description", name: "description", widget: "string"}
+    - {label: "Portfolio Body", name: "body", widget: "markdown"}
+    - {label: "Thumbnail Image", name: "thumbImage", widget: "image"}
+    - {label: "Featured Image", name: "featuredImage", widget: "image"}
+
+  - name: "posts"        #The name of the collection and should match our posts.json file's tag
+  label: "Posts"       #The name of the collection on the CMS itself
+  folder: "posts"      #The folder that our blog posts will be loaded from and saved to
+  create: true             #Tells the CMS that new posts can be created
+  slug: "{{slug}}"  #this sets the URL for the post
+  fields:
+    - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/posts.njk"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Description", name: "description", widget: "string"}
+    - {label: "Date", name: "date", widget: "date", default: ""}
+    - {label: "Post Body", name: "body", widget: "markdown"}
+    - {label: "Featured Image", name: "featuredImage", widget: "image"}
