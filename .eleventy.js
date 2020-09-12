@@ -1,12 +1,16 @@
 module.exports = function(eleventyConfig) {
+  // Input directory: src
+  // Output directory: _site
+
   // eleventyConfig.setUseGitIgnore(false);
 
   eleventyConfig.addWatchTarget("./_tmp/style.css");
 
-  eleventyConfig.addPassthroughCopy('favicon.ico');
-  eleventyConfig.addPassthroughCopy('images');
-  eleventyConfig.addPassthroughCopy('scripts');
-  eleventyConfig.addPassthroughCopy('admin');
+  eleventyConfig.addPassthroughCopy({'src/admin': 'admin'});
+  eleventyConfig.addPassthroughCopy({'src/css': 'css'});
+  eleventyConfig.addPassthroughCopy({'src/images': 'images'});
+  eleventyConfig.addPassthroughCopy({'src/scripts': 'scripts'});
+  eleventyConfig.addPassthroughCopy({'src/favicon.ico': 'favicon.ico'});
 
   eleventyConfig.addShortcode("version", function () {
     return String(Date.now());
