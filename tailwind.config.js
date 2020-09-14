@@ -14,7 +14,16 @@ module.exports = {
           800: '#090038',
           900: '#060025'
         },
-      }
+      },
+      fontFamily: {
+        sans: [
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          '"Noto Sans"',
+          'sans-serif',
+        ]
+      },
     }
   },
   variants: {},
