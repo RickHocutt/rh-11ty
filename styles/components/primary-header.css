@@ -1,0 +1,11 @@
+.primary-header a {
+  @apply text-white text-xl mr-8;
+}
+
+.primary-header li:last-child a {
+  @apply mr-0;
+}
+
+.primary-header a:hover {
+  @apply text-gray-400;
+}

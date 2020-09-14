@@ -22,15 +22,16 @@
   @apply z-20;
 }
 
+.portfolio-item:hover img, .portfolio-item:focus img {
+  filter: brightness(53%);
+}
+
 .portfolio-item:focus {
   @apply outline-none shadow-outline;
 }
 
-.portfolio-item:hover img {
-  filter: brightness(53%);
-}
-
-.portfolio-item:hover .portfolio-item__heading {
+.portfolio-item:hover .portfolio-item__heading, .portfolio-item:focus .portfolio-item__heading {
+  color: #fff;
   bottom: 50%;
   transform: translateY(50%);
 }

@@ -5,8 +5,13 @@
 
 @import "tailwindcss/components";
 @import "./components/buttons.css";
+@import "./components/primary-header.css";
 @import "./components/portfolio.css";
 @import "./components/social-icons.css";
+
+html {
+  scroll-behavior: smooth;
+}
 
 .site-logo {
   display: block;
@@ -15,18 +20,6 @@
   height: 84px;
   background: url('../images/rh-logo.svg');
   background-size: 100px 84px;
-}
-
-.primary-header a {
-  @apply text-white text-xl mr-8;
-}
-
-.primary-header li:last-child a {
-  @apply mr-0;
-}
-
-.primary-header a:hover {
-  @apply text-gray-400;
 }
 
 @tailwind utilities;
