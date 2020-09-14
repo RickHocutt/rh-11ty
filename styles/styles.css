@@ -1,10 +1,12 @@
 
 @import "tailwindcss/base";
 @import "./base/typography.css";
+@import "./base/forms.css";
 
 @import "tailwindcss/components";
 @import "./components/buttons.css";
 @import "./components/portfolio.css";
+@import "./components/social-icons.css";
 
 .site-logo {
   display: block;
@@ -25,26 +27,6 @@
 
 .primary-header a:hover {
   @apply text-gray-400;
-}
-
-label {
-  @apply block;
-}
-
-input, textarea {
-  @apply block w-full p-2 border border-solid border-gray-500 shadow-inner;
-}
-
-input:focus, textarea:focus {
-  @apply outline-none shadow-outline;
-}
-
-.social-media {
-  @apply text-2xl;
-}
-
-.social-media a {
-  @apply text-gray-700 p-4;
 }
 
 @tailwind utilities;

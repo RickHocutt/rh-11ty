@@ -1,0 +1,12 @@
+
+.social-media {
+  @apply text-2xl;
+}
+
+.social-media a {
+  @apply text-gray-700 p-4;
+}
+
+.social-media a:hover, .social-media a:focus {
+  @apply text-primary-500;
+}
